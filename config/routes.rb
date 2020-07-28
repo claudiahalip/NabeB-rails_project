@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/login', to: 'session#login'
   delete '/logout', to: 'session#logout'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/auth/google_oauth2/callback', to:'session#omniauth'
 end
