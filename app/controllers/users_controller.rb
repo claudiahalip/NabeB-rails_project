@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def show
    @user = User.find(params[:id])
+   
   end 
 
   def new
@@ -14,8 +15,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.valid?
+      @user.save
       session[:user_id] = @user.id 
-      redirect_to businesses_path
+      redirect_to user_path(@user.id)
+
     else 
       redirect_to signup_path
     end

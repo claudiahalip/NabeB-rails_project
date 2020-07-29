@@ -4,21 +4,15 @@ class SessionController < ApplicationController
     end
 
     def create
-      user = User.find_by(id: params[:id])
+      user = User.find_by(id: session[:user_id])
       if user && user.authenticate(password: params[:password])
         session[:user_id] = user.id 
-        redirect_to businesses_path
+        redirect_to user_path(user)
       else 
         redirect_to signup_path
       end
     end
 
-    def destroy
-        session.delete(:user_id)
-        current_user = nil
-        redirect_to root_path
-      
-    end
 
     def omniauth 
       
@@ -31,6 +25,14 @@ class SessionController < ApplicationController
         redirect_to signup_path
       end
     end 
+
+    def destroy
+      
+      session.delete(:user_id)
+      current_user = nil
+      redirect_to root_path
+    
+  end
 
   private 
     def auth 
