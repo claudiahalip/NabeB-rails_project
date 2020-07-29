@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  def index
-  end
+  def index 
+    @users = User.all
+  end 
+  
+  def show
+   @user = User.find(params[:id])
+  end 
 
   def new
     @user = User.new
@@ -8,9 +13,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if user.valid?
+    if @user.valid?
       session[:user_id] = @user.id 
-      redirect_to user_path(@user)
+      redirect_to businesses_path
     else 
       redirect_to signup_path
     end
@@ -24,7 +29,7 @@ class UsersController < ApplicationController
     @user = User.find_by(:id, params[:id])
     if current_user == @user
       @user.update(user_params)
-      redirect_to user_path(@user)
+      redirect_to user_path(@user.id)
     else 
       redirect_to users_path, alert: "action forbbiden"
     end 

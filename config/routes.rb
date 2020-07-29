@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :neighborhoods
-  resources :businesses
-  resources :categories
+  
   root 'welcome#welcome'
   
   get '/auth/google_oauth2/callback', to:'session#omniauth'
@@ -12,8 +10,12 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
+  get '/user/:id', to: 'users#show', as: 'user'
 
-  resources :users, only: [:index, :show, :edit, :delete]
+  resources :users
+  resources :neighborhoods
+  resources :businesses
+  resources :categories
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
 end
