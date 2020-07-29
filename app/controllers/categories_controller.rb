@@ -27,4 +27,9 @@ class CategoriesController < ApplicationController
     def destroy 
 
     end 
+
+    private 
+    def category_params
+       params.require(:category).permite(:name)
+    end 
 end

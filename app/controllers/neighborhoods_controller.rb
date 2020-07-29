@@ -27,4 +27,9 @@ class NeighborhoodsController < ApplicationController
     def destroy 
 
     end 
+
+    private 
+    def neighborhood_params
+       params.require(:neighborhood).permite(:name,:city, :state, :zipcode )
+    end 
 end
