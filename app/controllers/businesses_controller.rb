@@ -21,11 +21,11 @@ class BusinessesController < ApplicationController
     end 
 
     def edit 
-      @business = Business.find(params[:id])
+      @business = Business.find_id(id: params[:id])
     end 
 
     def update 
-      @business = Business.find(params[:id])
+      @business = Business.find_by(id: params[:id])
       @business.update(business_params)
       redirect_to business_path(@business)
     end 

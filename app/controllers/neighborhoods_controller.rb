@@ -30,6 +30,6 @@ class NeighborhoodsController < ApplicationController
 
     private 
     def neighborhood_params
-       params.require(:neighborhood).permite(:name,:city, :state, :zipcode )
+       params.require(:neighborhood).permit(:name,:city, :state, :zipcode )
     end 
 end
