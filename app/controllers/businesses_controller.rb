@@ -9,6 +9,11 @@ class BusinessesController < ApplicationController
 
     def create 
       @business = Business.create(business_params)
+      if @business.save 
+        redirect_to business_path(@business)
+      else 
+        render :new
+      end
     end 
 
     def show 
@@ -16,20 +21,24 @@ class BusinessesController < ApplicationController
     end 
 
     def edit 
-
+      @business = Business.find(params[:id])
     end 
 
     def update 
-
+      @business = Business.find(params[:id])
+      @business.update(business_params)
+      redirect_to business_path(@business)
     end 
 
     def destroy 
-
+      business = Business.find(params[:id])
+      business.destroy
+      redirect_to businesses_path
     end 
 
     private
 
     def business_params
-      params.require(:business).permit(:name, :descriprion, :website, :phone_number)
+      params.require(:business).permit(:name, :description, :website, :phone_number)
     end 
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   
   root 'welcome#welcome'
   
@@ -12,10 +13,13 @@ Rails.application.routes.draw do
   post 'signup', to: 'users#create'
   get '/user/:id', to: 'users#show', as: 'user'
 
-  resources :users
-  resources :neighborhoods
   resources :businesses
   resources :categories
+  resources :neighborhoods
+  resources :users
+  
+  
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
 end
