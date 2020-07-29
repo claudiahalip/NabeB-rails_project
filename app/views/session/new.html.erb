@@ -2,18 +2,18 @@
 
 <h2>Login</h2>
 
-<%=form_for @user, as: :user, url: users_path  do |f|%>
-  <%=f.label :username%><br>
-  <%=f.text_field :username%><br><br>
+<%=form_tag '/login' do %>
+  <%=label_tag :username%><br>
+  <%=text_field_tag :username%><br><br>
 
-  <%=f.label :password%><br>
-  <%=f.password_field :password%><br><br>
+  <%=label_tag :password%><br>
+  <%=password_field_tag :password%><br><br>
 
-  <%=f.label :password_confirmation%><br>
-   <%=f.password_field :password_confirmation%><br><br>
+  <%=label_tag :password_confirmation%><br>
+   <%=password_field_tag :password_confirmation%><br><br>
 
 
-  <%=f.submit "Log In"%>
+  <%=submit_tag "Log In"%>
 
 <%end%>
 

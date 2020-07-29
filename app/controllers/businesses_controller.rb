@@ -8,6 +8,7 @@ class BusinessesController < ApplicationController
     end 
 
     def create 
+      @business = Business.create(business_params)
       
     end 
 
@@ -26,4 +27,8 @@ class BusinessesController < ApplicationController
     def destroy 
 
     end 
+
+    private
+
+    
 end
