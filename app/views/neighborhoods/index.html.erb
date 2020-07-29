@@ -1,0 +1,11 @@
+<h2>Index Neighborhood</h2>
+
+<ul>
+<%@neighborhoods.each do |n|%>
+   <li><%=n.name%></li>
+   <%=n.city%>
+   <%=n.state%>
+   <%=n.zipcode%>
+<%end%>
+
+</ul>

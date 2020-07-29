@@ -1,0 +1,9 @@
+<h2>Show  Neighborhood</h2>
+
+<%=@neighborhood.name%>
+<%=@neighborhood.city%>
+<%=@neighborhood.state%>
+<%=@neighborhood.zipcode%>
+
+<%=link_to "Edit", edit_neighborhood_path%>
+<%=link_to "Delete", neighborhood_path, method: "DELETE"%>
