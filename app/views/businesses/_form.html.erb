@@ -21,6 +21,25 @@
   <%=f.label :neighborhood%><br>
   <%=f.collection_select :neighborhood_id, Neighborhood.all, :id,  :name %><br><br>
 
+        <%=form_for :neighborhood do |n|%>
+        <%=n.label :form_to_create_a_neighborhood%><br>
+        <%=n.label :name%><br>
+        <%=n.text_field :name%><br>
+
+        <%=n.label :city%><br>
+        <%=n.text_field :city%><br>
+
+        <%=n.label :state%><br>
+        <%=n.text_field :state%><br>
+
+        <%=n.label :zipcode%><br>
+        <%=n.text_field :zipcode%><br>
+
+        <%=f.submit "Create Neighborhood" %><br><br>
+    
+    <%end%>
+
+
 
   <%=f.label :description%><br>
   <%=f.text_area :description%><br><br>

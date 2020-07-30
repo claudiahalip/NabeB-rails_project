@@ -5,6 +5,7 @@ class BusinessesController < ApplicationController
 
     def new 
       @business = Business.new
+      @business.build_neighborhood
     end 
 
     def create 
@@ -40,6 +41,6 @@ class BusinessesController < ApplicationController
     private
 
     def business_params
-      params.require(:business).permit(:name, :description, :website, :phone_number)
+      params.require(:business).permit(:name, :description, :website, :phone_number, neighborhood_attributes:[:name, :city, :state, :zipcode])
     end 
 end
