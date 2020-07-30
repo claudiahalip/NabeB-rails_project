@@ -8,14 +8,17 @@ class BusinessesController < ApplicationController
     end 
 
     def new 
-      @business = Business.new
-      
+      if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
+        @business = @neighborhood.businesses.build
+      else
+       @business = Business.new
+      end 
     end 
 
     def create 
     
       @business = Business.create(business_params)
-      
+      #byebug
       if @business.save 
         redirect_to business_path(@business)
       else 
@@ -47,6 +50,6 @@ class BusinessesController < ApplicationController
     private
 
     def business_params
-      params.require(:business).permit(:name, :description, :website, :phone_number)
+      params.require(:business).permit(:name, :description, :website, :phone_number, :category_id, :neighborhood_id)
     end 
 end
