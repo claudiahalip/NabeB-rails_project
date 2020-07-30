@@ -3,7 +3,8 @@
 <%=@neighborhood.name%>
 <%=@neighborhood.city%>
 <%=@neighborhood.state%>
-<%=@neighborhood.zipcode%>
+<%=@neighborhood.zipcode%><br><br>
 
-<%=link_to "Edit", edit_neighborhood_path%>
-<%=link_to "Delete", neighborhood_path, method: "DELETE"%>
+<%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%><br><br>
+<%=link_to "Edit neighborhood", edit_neighborhood_path%><br><br>
+<%=link_to "Delete neighborhood", neighborhood_path, method: "DELETE"%><br><br>

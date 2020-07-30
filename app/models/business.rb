@@ -5,6 +5,6 @@ class Business < ApplicationRecord
 
   accepts_nested_attributes_for :neighborhood 
   
-  validation :name, :website, :phone_number, presence: true
-  validation :name, :website, :phone_number, uniqueness: true
+  validates :name,:description, :phone_number, presence: true
+  validates :name, :website, :phone_number, uniqueness: true
 end

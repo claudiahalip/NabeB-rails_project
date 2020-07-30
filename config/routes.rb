@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   resources :businesses
   resources :categories
-  resources :neighborhoods
+  resources :neighborhoods do 
+    resources :businesses
+  end
   resources :users
   
   

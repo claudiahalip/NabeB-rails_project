@@ -1,15 +1,21 @@
 class BusinessesController < ApplicationController
     def index
-      @businesses = Business.all
+      if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
+        @businesses = @neighborhood.businesses
+      else 
+        @businesses = Business.all
+      end
     end 
 
     def new 
       @business = Business.new
-      @business.build_neighborhood
+      
     end 
 
     def create 
+    
       @business = Business.create(business_params)
+      
       if @business.save 
         redirect_to business_path(@business)
       else 
@@ -41,6 +47,6 @@ class BusinessesController < ApplicationController
     private
 
     def business_params
-      params.require(:business).permit(:name, :description, :website, :phone_number, neighborhood_attributes:[:name, :city, :state, :zipcode])
+      params.require(:business).permit(:name, :description, :website, :phone_number)
     end 
 end

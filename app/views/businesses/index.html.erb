@@ -1,2 +1,11 @@
-<h1>Index Business</h1>
+<h2><%=display_businesses_header(@neighborhood)%></h2>
 
+<ul>
+ <%@businesses.each do |b|%>
+    <li><%=b.name%></li>
+    <%=b.description%><br>
+    <%=b.website%><br>
+    <%=b.phone_number%><br>
+    <br>
+ <%end%>
+ </ul>
