@@ -1,10 +1,12 @@
-<h1>Show</h1>
+
 
 <ul>
- <li><%=@business.name%></li>
+ <h2><li><%=@business.name%></li></h2>
     <p><%=@business.description%><br></p>
     <%=@business.website%><br>
     <%=@business.phone_number%><br>
     <br>
 
  </ul>
+
+ <%=link_to "Back to all businesses", businesses_path%>

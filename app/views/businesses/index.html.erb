@@ -1,11 +1,22 @@
 <h2><%=display_businesses_header(@neighborhood)%></h2>
 
+<%= form_tag('/businesses', method: 'get') do %>
+  <%=text_field_tag(:q)%> 
+  <%=submit_tag("Search for a business")%>
+<%end%>
+
+
+
 <ul>
  <%@businesses.each do |b|%>
-    <li><%=b.name%></li>
+    <li><%=link_to b.name, business_path(b)%></li>
     <%=b.description%><br>
     <%=b.website%><br>
     <%=b.phone_number%><br>
     <br>
  <%end%>
  </ul>
+
+ <%=link_to "Add your business", new_business_path%>
+
+ 

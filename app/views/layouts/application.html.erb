@@ -10,9 +10,8 @@
   </head>
 
   <body>
-    
+    <h4><%=display_username_header%></h4> 
     <%if logged_in?%>
-      
        <%=link_to("Log Out", '/logout', method: 'delete')%>
     <%else%>
       <%=button_to "Log in with Google",'/auth/google_oauth2'%>
@@ -20,6 +19,7 @@
       <%=link_to "Sign up", signup_path%>
       <%=link_to "Login",login_path %>
     <%end %>
+    
     <%= yield %>
   </body>
 </html>

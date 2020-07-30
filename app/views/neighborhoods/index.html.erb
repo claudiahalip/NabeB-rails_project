@@ -1,11 +1,13 @@
-<h2>Index Neighborhood</h2>
+<h2>All Neighborhood</h2>
 
 <ul>
 <%@neighborhoods.each do |n|%>
-   <li><%=n.name%></li>
+   <li><%=link_to n.name, neighborhood_businesses_path(n)%></li>
    <%=n.city%>
    <%=n.state%>
    <%=n.zipcode%>
 <%end%>
 
 </ul>
+
+<%=link_to "All businesses", businesses_path%>
