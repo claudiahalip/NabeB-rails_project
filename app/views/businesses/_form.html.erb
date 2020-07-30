@@ -19,6 +19,8 @@
 
 <%=f.label :category%><br>
   <%=f.collection_select :category_id, Category.all, :id,  :name, :include_blank => 'choose a category' %><br><br>
+    
+      
 
   <%=f.label :business_name%><br>
   <%=f.text_field :name%><br><br>
