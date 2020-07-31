@@ -1,7 +1,11 @@
 class NeighborhoodsController < ApplicationController
 
     def index
-      @neighborhoods = Neighborhood.all
+      if params[:q] && !params[:q].empty?
+        @neighborhoods = Neighborhood.search_neighborhood(params[:q])
+      else 
+        @neighborhoods = Neighborhood.all
+      end
     end 
 
     def new 

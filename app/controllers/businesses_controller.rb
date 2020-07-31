@@ -1,4 +1,8 @@
 class BusinessesController < ApplicationController
+  
+  
+  rescue_from ActiveRecord::RecordNotFound, with: :handle_record_not_found
+
     def index
       if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
         @businesses = @neighborhood.businesses.alpha_sort
@@ -13,8 +17,9 @@ class BusinessesController < ApplicationController
       if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
         @business = @neighborhood.businesses.build
       else
-       @business = Business.new
+        @business = Business.new
       end 
+      
     end 
 
     def create 
@@ -49,9 +54,15 @@ class BusinessesController < ApplicationController
       redirect_to businesses_path
     end 
 
+    def handle_record_not_found
+      render :index 
+    end
+
     private
 
     def business_params
-      params.require(:business).permit(:name, :description, :website, :phone_number, :category_id, :neighborhood_id)
+      params.require(:business).permit(:name, :description, :website, :phone_number, :neighborhood_id, :category_id)
     end 
+
+    
 end

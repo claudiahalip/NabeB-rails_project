@@ -1,5 +1,11 @@
 <h2>All Neighborhood</h2>
 
+<%= form_tag('/neighborhoods', method: 'get') do %>
+  <%=text_field_tag(:q)%> 
+  <%=submit_tag("Search for a neighborhood")%>
+<%end%>
+
+
 <ul>
 <%@neighborhoods.each do |n|%>
    <li><%=link_to n.name, neighborhood_businesses_path(n)%></li>

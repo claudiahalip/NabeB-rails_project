@@ -26,4 +26,6 @@ class Business < ApplicationRecord
   def self.search_business(params)
     where("LOWER(name) LIKE?","%#{params}%" )
   end 
+
+  
 end
