@@ -9,6 +9,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  
+  
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+ 
+    
+  
+
   <body>
     <h4><%=display_username_header%></h4> 
     <%if logged_in?%>
