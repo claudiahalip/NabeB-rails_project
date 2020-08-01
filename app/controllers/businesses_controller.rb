@@ -15,9 +15,14 @@ class BusinessesController < ApplicationController
 
     def new 
       if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
-        @business = @neighborhood.businesses.build
+        @business = @business.build_neighborhood
+        
+        
+  #@neighborhood.businesses.build
       else
         @business = Business.new
+        #byebug
+        @business.build_category
       end 
       
     end 
@@ -39,7 +44,7 @@ class BusinessesController < ApplicationController
     end 
 
     def edit 
-      @business = Business.find_id(id: params[:id])
+      @business = Business.find_by(id: params[:id])
     end 
 
     def update 
@@ -61,7 +66,7 @@ class BusinessesController < ApplicationController
     private
 
     def business_params
-      params.require(:business).permit(:name, :description, :website, :phone_number, :neighborhood_id, :category_id)
+      params.require(:business).permit(:name, :description, :website, :phone_number, :neighborhood_id, :category_name, :user_name)
     end 
 
     

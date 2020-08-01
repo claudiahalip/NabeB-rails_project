@@ -2,6 +2,7 @@ class Business < ApplicationRecord
 
   belongs_to :neighborhood
   belongs_to :category
+  belongs_to :user
 
   accepts_nested_attributes_for :neighborhood 
   
@@ -9,23 +10,22 @@ class Business < ApplicationRecord
   validates :name, :website, :phone_number, uniqueness: true
    
   def category_name=(name)
-    self.category = Category.find_or_create_by_(name: name)
-    
+    self.category = Category.find_or_create_by(name: name)
   end 
 
   def category_name
     self.category ? self.category.name : nil
   end 
 
-
-
-  def self.alpha_sort
-    self.order(:name)
-  end 
-
-  def self.search_business(params)
-    where("LOWER(name) LIKE?","%#{params}%" )
-  end 
-
   
+  def user_name=(name)
+    self.user = User.find_or_create_by(username: name)
+  end 
+
+  def user_name
+    self.user ? self.user.username : nil
+  end 
+
+  scope :search_business, -> (params) { where("LOWER(name) LIKE?","%#{params}%" )}
+
 end

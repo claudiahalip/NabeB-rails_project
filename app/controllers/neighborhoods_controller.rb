@@ -4,7 +4,7 @@ class NeighborhoodsController < ApplicationController
       if params[:q] && !params[:q].empty?
         @neighborhoods = Neighborhood.search_neighborhood(params[:q])
       else 
-        @neighborhoods = Neighborhood.all
+        @neighborhoods = Neighborhood.all.alpha_sort
       end
     end 
 

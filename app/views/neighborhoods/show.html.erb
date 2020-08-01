@@ -6,5 +6,5 @@
 <%=@neighborhood.zipcode%><br><br>
 
 <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%><br><br>
-<%=link_to "Edit neighborhood", edit_neighborhood_path%><br><br>
-<%=link_to "Delete neighborhood", neighborhood_path, method: "DELETE"%><br><br>
+<%=link_to "Edit neighborhood", edit_neighborhood_path(@neighborhood)%><br><br>
+<%=link_to "Back to all neighborhoods", neighborhoods_path%><br><br>

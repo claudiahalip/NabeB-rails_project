@@ -18,11 +18,16 @@
   
 
 <%=f.label :category%><br>
-  <%=f.collection_select :category_id, Category.all, :id,  :name, :include_blank => 'choose a category' %><br><br>
-    
-      
+  <%=f.collection_select :category_id, Category.all, :id, :name, :include_blank => 'choose a category' %> 
 
-  <%=f.label :business_name%><br>
+
+      <%=form_for :category do |c|%>
+      <%=c.label :or_create_one_category%>
+      <%=c.text_field :name%>
+    
+      <%end%><br><br>
+      
+   <%=f.label :business_name%><br>
   <%=f.text_field :name%><br><br>
 
   <%=f.label :description%><br>
@@ -33,6 +38,11 @@
 
   <%=f.label :phone_number%><br>
   <%=f.text_field :phone_number%><br><br>
+
+  <%=f.label :username%><br>
+  <%=f.text_field :user_name%><br><br>
+
+
 
 
 
