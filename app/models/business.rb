@@ -9,13 +9,13 @@ class Business < ApplicationRecord
   validates :name,:description, :phone_number, presence: true
   validates :name, :website, :phone_number, uniqueness: true
    
-  def category_name=(name)
-    self.category = Category.find_or_create_by(name: name)
-  end 
+  # def category_attributes=(attr)
+  #   self.category = Category.first_or_create_by(attr)
+  # end 
 
-  def category_name
-    self.category ? self.category.name : nil
-  end 
+  # # def category_name
+  # #   self.category ? self.category.name : nil
+  # # end 
 
   
   def user_name=(name)
