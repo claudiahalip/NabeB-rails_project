@@ -48,3 +48,15 @@
     font-family: verdana;
     font-size: 100%;
   }
+
+  .error_messages {
+    color: rgb(245, 9, 9);
+    font-family: verdana;
+    font-size: 100%;
+  }
+
+  #error_explanation {
+    color: rgb(245, 9, 9);
+    font-family: verdana;
+    font-size: 100%;
+  }

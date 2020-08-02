@@ -42,15 +42,25 @@ class BusinessesController < ApplicationController
     end 
 
     def update 
-      @business = Business.find_by(id: params[:id])
-      @business.update(business_params)
-      redirect_to business_path(@business)
+     @business = Business.find_by(id: params[:id])
+     if current_user.id == @business.user_id
+        @business.update(business_params)
+        redirect_to business_path(@business)
+      else
+        flash[:message] = "Not yours to change"
+        redirect_to businesses_path
+      end
     end 
 
     def destroy 
       business = Business.find(params[:id])
-      business.destroy
-      redirect_to businesses_path
+      if current_user.id == business.user_id
+        business.destroy
+        redirect_to businesses_path
+      else
+        flash[:message] = "Not yours to delete"
+        redirect_to businesses_path
+      end 
     end 
 
 

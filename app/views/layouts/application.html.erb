@@ -10,21 +10,22 @@
   </head>
 
   
-  
+    
     <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
- 
+     <div class="error_messages"> <%= content_tag :div, msg, class: name %> </div>
+    <% end%>
+   
     
   
 
   <body>
-    <h4><%=display_username_header%></h4> 
+    <h4><%=display_username_header%>
+  
     <%if logged_in?%>
        <%=link_to("Log Out", '/logout', method: 'delete')%>
+       <%=link_to "Your account", user_path(current_user)%>
     <%else%>
       <%=button_to "Log in with Google",'/auth/google_oauth2'%>
-      <%=link_to "Home", '/' %> 
       <%=link_to "Sign up", signup_path%>
       <%=link_to "Login",login_path %>
     <%end %>

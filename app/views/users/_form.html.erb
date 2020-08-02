@@ -1,4 +1,8 @@
-<h2>Sign Up</h2>
+<%if current_user%>
+   <h4>Edit your profile</h4>
+<%else%>
+   <h2>Sign Up</h2>
+<%end%>
 
 <%=form_for @user do |f|%>
    <%=f.label :username%><br>

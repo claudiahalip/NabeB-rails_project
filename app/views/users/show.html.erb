@@ -1,3 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%=current_user.username%></h1>
 
+
+<%=link_to "edit your profile", edit_user_path(current_user)%> 
+<%=link_to "delete your profile", users_path, method: "delete"%><br><br><br>
+
+<h4><%=link_to "Add your business", new_business_path%></h4>
+
+
+ <h4><%=link_to "See all nabes", neighborhoods_path%></h4>

@@ -35,15 +35,18 @@ class UsersController < ApplicationController
       @user.update(user_params)
       redirect_to user_path(@user.id)
     else 
-      redirect_to users_path, alert: "action forbbiden"
+      flash[:message] = "Not yours to change"
+      redirect_to users_path
     end 
   end 
+  
 
   def delete
     user = User.find_by[id: params[:id]]
     if current_user == user
       user.delete
-      redirect_to root_path
+      flash[:message] = "Not yours to delete"
+      redirect_to root_path 
     end
   end 
 
