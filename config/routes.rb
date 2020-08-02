@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :neighborhoods do 
     resources :businesses
   end
-  resources :users
+  resources :users, only: [:new, :create, :show]
   
   
   

@@ -6,17 +6,17 @@
 <%end%>
 
 
-
 <ul>
  <%@businesses.each do |b|%>
     <li><%=link_to b.name, business_path(b)%></li>
     <%=b.description%><br>
     <%=b.website%><br>
     <%=b.phone_number%><br>
-    <%=b.user_id%><br>
+   
     <br>
  <%end%>
  </ul>
+
 
  <%=link_to "Add your business", new_business_path%><br><br>
 

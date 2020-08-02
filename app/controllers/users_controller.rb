@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only:[:new, :create]
 
-  def index 
-    @users = User.all
-  end 
-  
   def show
    @user = User.find(params[:id])
    
@@ -25,21 +21,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-    @user = User.new
-  end
-
-  def update
-    @user = User.find_by(:id, params[:id])
-    if current_user == @user
-      @user.update(user_params)
-      redirect_to user_path(@user.id)
-    else 
-      flash[:message] = "Not yours to change"
-      redirect_to users_path
-    end 
-  end 
-  
 
   def delete
     user = User.find_by[id: params[:id]]

@@ -11,8 +11,10 @@ class SessionController < ApplicationController
       user = User.find_by_username(params[:username])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id 
+        flash[:message] = "You are succesfuly logged in"
         redirect_to businesses_path
       else 
+        flash[:message] = "There is no account to mach these info"
         redirect_to '/'
       end
     end
