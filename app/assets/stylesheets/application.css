@@ -21,6 +21,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 25px;
   }
   
   a:hover, a:active {
@@ -59,4 +60,18 @@
     color: rgb(245, 9, 9);
     font-family: verdana;
     font-size: 100%;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .center_text {
+    margin: auto;
+  width: 40%;
+  
+  padding: 10px;
   }
