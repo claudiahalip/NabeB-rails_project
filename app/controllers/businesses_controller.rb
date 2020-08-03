@@ -12,26 +12,23 @@ class BusinessesController < ApplicationController
     end 
 
     def new 
-      byebug
       if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
         @business = @neighborhood.businesses.build 
 
       else
         @business = Business.new
-        
+        @business.build_category
       end 
-      @business.category_build
+      @business.build_category
+      
       
     end 
 
     def create 
-    
       @business = Business.create(business_params)
-      byebug
       if @business.save 
         redirect_to business_path(@business)
       else 
-        
         render :new
       end
     end 

@@ -19,9 +19,10 @@
 <%=f.label :category%><br>
   <%=f.collection_select :category_id, Category.all, :id,  :name, :include_blank => 'choose a category' %>
 
+<h5>or create one</h5>
 
   <%=f.fields_for :category do |c|%>
-     <%=c.label :or_create_a_new_category%>
+     <%=c.label :name%>
      <%=c.text_field :name%>
 
   <%end%><br><br>
