@@ -8,7 +8,7 @@
 
 <ul>
 <%@neighborhoods.each do |n|%>
-   <li><%=link_to n.name, neighborhood_businesses_path(n)%></li>
+   <li><%=link_to n.name, neighborhood_path(n), class: "internal"%></li>
    <%=n.city%>
    <%=n.state%>
    <%=n.zipcode%>
@@ -17,3 +17,4 @@
 </ul>
 
 <%=link_to "All businesses", businesses_path%>
+<%=link_to "Add a neiborhood", new_neighborhood_path%>

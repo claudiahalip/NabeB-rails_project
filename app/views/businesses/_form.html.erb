@@ -17,7 +17,14 @@
   <%=f.collection_select :neighborhood_id, Neighborhood.all, :id,  :name, :include_blank => 'choose a neighborhood' %><br><br>
   
 <%=f.label :category%><br>
-  <%=f.collection_select :category_id, Category.all, :id,  :name, :include_blank => 'choose a category' %><br><br> 
+  <%=f.collection_select :category_id, Category.all, :id,  :name, :include_blank => 'choose a category' %>
+
+
+  <%=f.fields_for :category do |c|%>
+     <%=c.label :or_create_a_new_category%>
+     <%=c.text_field :name%>
+
+  <%end%><br><br>
 
       
   <%=f.label :business_name%><br>

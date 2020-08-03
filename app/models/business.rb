@@ -4,20 +4,17 @@ class Business < ApplicationRecord
   belongs_to :category
   belongs_to :user
 
-  accepts_nested_attributes_for :neighborhood 
+  #accepts_nested_attributes_for :category
   
   validates :name,:description, :phone_number, presence: true
   validates :name, :website, :phone_number, uniqueness: true
    
-  # def category_attributes=(attr)
-  #   self.category = Category.first_or_create_by(attr)
-  # end 
+  def category_attributes=(attr)
+    if !attr[:name].blank?
+      self.category= Category.find_or_create_by(name: attr[:name])
+    end
+  end 
 
-  # # def category_name
-  # #   self.category ? self.category.name : nil
-  # # end 
-
-  
   def user_name=(name)
     self.user = User.find_or_create_by(username: name)
   end 
@@ -25,7 +22,7 @@ class Business < ApplicationRecord
   def user_name
     self.user ? self.user.username : nil
   end 
-
+    
   scope :search_business, -> (params) { where("LOWER(name) LIKE?","%#{params}%" )}
 
 end

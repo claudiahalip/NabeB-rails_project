@@ -17,7 +17,7 @@
  a:link, a:visited {
     background-color: #dfc3c0;
     color: white;
-    padding: 14px 25px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -27,6 +27,15 @@
   a:hover, a:active {
     background-color: rgb(0, 255, 170);
   }
+  
+  a.internal {background-color: #999594;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+
 
   h2 {
     color: rgb(0, 255, 170);
@@ -77,3 +86,8 @@
   }
 
   
+.field_with_errors {
+  padding: 2px;
+  background-color: rgb(209, 120, 120);
+  display: inline;
+}

@@ -5,20 +5,16 @@
   <%=submit_tag("Search for a business")%>
 <%end%>
 
-
 <ul>
  <%@businesses.each do |b|%>
-    <li><%=link_to b.name, business_path(b)%></li>
-    <%=b.description%><br>
-    <%=b.website%><br>
-    <%=b.phone_number%><br>
-   
+    <li><%=link_to b.name, business_path(b), class: "internal"%></li>
+    
     <br>
  <%end%>
  </ul>
+  
 
 
- <%=link_to "Add your business", new_business_path%><br><br>
-
- <h4><%=link_to "See all nabes", neighborhoods_path%></h4>
+ 
+<h4><%=link_to "See all nabes", neighborhoods_path%></h4>
  

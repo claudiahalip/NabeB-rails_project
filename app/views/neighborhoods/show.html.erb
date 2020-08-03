@@ -1,11 +1,9 @@
 <h2>Show  Neighborhood</h2>
 
-<%=@neighborhood.name%>
-<%=@neighborhood.city%>
-<%=@neighborhood.state%>
-<%=@neighborhood.zipcode%><br><br>
+<%= render "neighborhood"%><br><br><br>
 
-<%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%><br><br>
+<%=link_to "Add a business nested", new_neighborhood_business_path(@neighborhood)%><br><br>
 <%=link_to "Edit neighborhood", edit_neighborhood_path(@neighborhood)%><br><br>
 <%=link_to "Back to all neighborhoods", neighborhoods_path%><br><br>
 <%=link_to "Back to all businesses", businesses_path%>
+
