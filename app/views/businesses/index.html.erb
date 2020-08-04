@@ -8,7 +8,6 @@
 <ul>
  <%@businesses.each do |b|%>
     <li><%=link_to b.name, business_path(b), class: "internal"%></li>
-    
     <br>
  <%end%>
  </ul>

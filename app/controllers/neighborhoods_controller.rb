@@ -34,12 +34,7 @@ class NeighborhoodsController < ApplicationController
       @neighborhood.update(neighborhood_params)
       redirect_to neighborhood_path(@neighborhood)
     end 
-
-    def destroy 
-      neighborhood = Neighborhood.find_by(id: params[:id])
-      neighborhood.destroy
-      redirect_to neighborhoods_path
-    end 
+   
 
     private 
 

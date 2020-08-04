@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/user/:id', to: 'users#show', as: 'user'
 
   resources :businesses
-  resources :categories
+  resources :categories, only: [:new, :create]
   resources :neighborhoods do 
     resources :businesses
   end
@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  
+  match '*unmatched', to: 'application#route_not_found', via: :all
 end

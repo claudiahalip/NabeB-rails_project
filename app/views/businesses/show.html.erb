@@ -1,9 +1,7 @@
 
 <%=render partial:  "business"%>
 
-<%=link_to "Back to all businesses", businesses_path%>
+<%=display_edit_business(@business)%>
+<%=display_delete_business(@business)%><br><br>
 
-<%if current_user.id == @business.user_id%>
-    <%=link_to "Edit", edit_business_path%>
-    <%=link_to "Delete business", business_path, method: "DELETE"%><br><br>
-<%end%>
+<%=link_to "Back to all businesses", businesses_path%>
