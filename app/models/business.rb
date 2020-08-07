@@ -29,6 +29,8 @@ class Business < ApplicationRecord
     self.user ? self.user.username : nil
   end 
     
-  scope :search_business, -> (params) { where("LOWER(name) LIKE?","%#{params}%" )}
+  scope :search_business, -> (params) { where("LOWER(name) LIKE :q OR LOWER(description) LIKE :q",q: "%#{params}%" )}
 
+  
+  
 end

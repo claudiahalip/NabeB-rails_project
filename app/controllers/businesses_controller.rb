@@ -1,14 +1,11 @@
 class BusinessesController < ApplicationController
   
   
-  def index
-      if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
-        @businesses = @neighborhood.businesses.alpha_sort
-      elsif params[:q] && !params[:q].empty?
-        @businesses = Business.search_business(params[:q])
-      else 
-        @businesses = Business.all.alpha_sort
-      end
+    def index
+      @businesses = Business.all.alpha_sort
+      @businesses = @neighborhood.businesses.alpha_sort if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
+      @businesses = Business.search_business(params[:q]) if  params[:q] && !params[:q].empty?
+      
     end 
 
     def new 

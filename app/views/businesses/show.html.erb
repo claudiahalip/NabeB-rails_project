@@ -1,7 +1,7 @@
-
-<%=render partial:  "business"%>
-
-<%=display_edit_business(@business)%>
-<%=display_delete_business(@business)%><br><br>
+<%if @business%>
+    <%=render partial:  "business"%>
+    <%=display_edit_business(@business)%>
+    <%=display_delete_business(@business)%><br><br>
+ <%end%>
 
 <%=link_to "Back to all businesses", businesses_path%>

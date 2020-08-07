@@ -12,7 +12,6 @@ module BusinessesHelper
     def display_edit_business(business)
         if current_user.id == business.user_id
             link_to "Edit", edit_business_path 
-           
         end
     end 
 
