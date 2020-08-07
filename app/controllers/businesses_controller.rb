@@ -11,13 +11,10 @@ class BusinessesController < ApplicationController
     def new 
       if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
         @business = @neighborhood.businesses.build 
-
       else
         @business = Business.new
-        @business.build_category
       end 
       @business.build_category
-      
       
     end 
 

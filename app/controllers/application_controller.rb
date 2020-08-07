@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   before_action :require_login
-  #rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+  
+  
 
   def route_not_found
     render file: Rails.public_path.join('404.html'), status: :not_found, layout: false
@@ -17,10 +18,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def record_not_found
-    flash[:message] = "This resource doesn't exist"
-    redirect_to neighborhoods_path
-  end 
 end
 
 
