@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id 
       redirect_to businesses_path
     else 
+      flash[:messages] = @user.errors.full_messages.join(" - ")
       redirect_to signup_path
     end
   end

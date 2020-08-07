@@ -1,6 +1,6 @@
 <% if @neighborhood.errors.any? %>
   <div id="error_explanation">
-    <h3><%= pluralize(@neighborhood.errors.count, "error") %> prohibited this article from being saved:</h3>
+    <h3><%= pluralize(@neighborhood.errors.count, "error") %> prohibited this neighborhood from being saved:</h3>
  
     <ul>
     <% @neighborhood.errors.full_messages.each do |msg| %>

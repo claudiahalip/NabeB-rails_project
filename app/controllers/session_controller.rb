@@ -13,8 +13,8 @@ class SessionController < ApplicationController
         flash[:message] = "You are succesfuly logged in"
         redirect_to businesses_path
       else 
-        flash[:message] = "There is no account to mach these info"
-        redirect_to '/'
+        flash[:message] = "There is no account to mach these info. Sign up first!"
+        redirect_to '/login'
       end
     end
 

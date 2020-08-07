@@ -1,6 +1,6 @@
 <% if @business.errors.any? %>
   <div id="error_explanation">
-    <h3><%= pluralize(@business.errors.count, "error") %> prohibited this article from being saved:</h3>
+    <h3><%= pluralize(@business.errors.count, "error") %> prohibited this business from being saved:</h3>
  
     <ul>
     <% @business.errors.full_messages.each do |msg| %>
