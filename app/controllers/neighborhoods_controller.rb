@@ -5,6 +5,7 @@ class NeighborhoodsController < ApplicationController
         @neighborhoods = Neighborhood.search_neighborhood(params[:q])
       else 
         @neighborhoods = Neighborhood.all.alpha_sort
+        
       end
     end 
 

@@ -6,6 +6,11 @@ class BusinessesController < ApplicationController
       @businesses = @neighborhood.businesses.alpha_sort if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
       @businesses = Business.search_business(params[:q]) if  params[:q] && !params[:q].empty?
       
+      respond_to do |format|
+        format.html{render :index}
+        format.json{render json: @businesses}
+      end 
+        
     end 
 
     def new 
@@ -19,7 +24,9 @@ class BusinessesController < ApplicationController
     end 
 
     def create 
+      
       @business = Business.create(business_params)
+  
       if @business.save 
         redirect_to business_path(@business)
       else 

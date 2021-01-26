@@ -9,4 +9,12 @@ class Neighborhood < ApplicationRecord
 
     scope :search_neighborhood, ->(params) {where("LOWER(name) LIKE?","%#{params}%")}
    
+    def self.sort_nebe_businesses
+         
+        neighborhood = Neighborhood.all  
+        n = neighborhood.sort_by { |n| n.businesses.size }
+        n.reverse
+    end 
+
+    #binding.pry
 end
