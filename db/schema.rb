@@ -10,22 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_050854) do
-
-  create_table "businesses", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "website"
-    t.string "phone_number"
-    t.integer "neighborhood_id", null: false
-    t.integer "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id", null: false
-    t.index ["category_id"], name: "index_businesses_on_category_id"
-    t.index ["neighborhood_id"], name: "index_businesses_on_neighborhood_id"
-    t.index ["user_id"], name: "index_businesses_on_user_id"
-  end
+ActiveRecord::Schema.define(version: 2021_01_27_142926) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -50,7 +35,4 @@ ActiveRecord::Schema.define(version: 2020_07_31_050854) do
     t.string "provider"
   end
 
-  add_foreign_key "businesses", "categories"
-  add_foreign_key "businesses", "neighborhoods"
-  add_foreign_key "businesses", "users"
 end
