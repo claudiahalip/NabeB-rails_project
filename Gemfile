@@ -6,7 +6,7 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
  gem 'omniauth'
  gem 'omniauth-rails_csrf_protection'
  gem 'omniauth-google-oauth2'
-
+ gem 'pg'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
