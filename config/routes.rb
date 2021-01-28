@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :businesses
   resources :categories, only: [:new, :create]
   resources :neighborhoods do 
-    resources :businesses
+  resources :businesses
   end
   resources :users, only: [:new, :create, :show]
   
