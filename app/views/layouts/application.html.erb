@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <title>NabeB</title>
     <%= csrf_meta_tags %>
@@ -20,10 +20,12 @@
 
   <body>
     <h4><%=display_username_header%>
-  
+    
     <%if logged_in?%>
-       <%=link_to("Log Out", '/logout', method: 'delete')%>
-       <%=link_to "Your account", user_path(current_user)%>
+   
+       <%=button_to("Log Out", '/logout', method: 'delete', class: "delete-button")%>
+       <%=link_to "Your account", user_path(current_user), class: "delete-button"%>
+      
     <%else%>
       <%=button_to "Log in with Google",'/auth/google_oauth2'%>
       <%=link_to "Sign up", signup_path%>

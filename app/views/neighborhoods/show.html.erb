@@ -5,13 +5,16 @@
     <%if @neighborhood.businesses.empty?%>
        <h5>There is no business listed in this area, yet!</h5>
     <%else%>
-       <%=link_to "See all the business in this nabe", neighborhood_businesses_path(@neighborhood), class: "internal"%><br><br><br><br>
+    
+       <%=link_to "See all the business in this nabe", neighborhood_businesses_path(@neighborhood), class: "link-for-see-all"%><br><br><br><br>
+      
     <%end%>
 
 
-
-    <%=link_to "Edit this nabe", edit_neighborhood_path %><br><br><br><br>
-    <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%><br><br>
-    <%=link_to "Back to all neighborhoods", neighborhoods_path%><br><br>
+   <div  class = "navbar-nabe">
+    <%=link_to "Edit this nabe", edit_neighborhood_path %>
+    <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%>
+    <%=link_to "Back to all neighborhoods", neighborhoods_path%>
     <%=link_to "Back to all businesses", businesses_path%>
+   </div>
 <%end%>

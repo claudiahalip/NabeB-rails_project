@@ -2,12 +2,15 @@
 
 <%= form_tag('/businesses', method: 'get') do %>
   <%=text_field_tag(:q)%> 
-  <%=submit_tag("Search for a business")%>
+  <%=submit_tag("Search for a business by category")%>
 <%end%>
 <br>
 
+<div  class = "navbar">
+   <%=link_to "See all nabes", neighborhoods_path%>
+ </div>
 
-<ul>
+<ul class="business-cards" >
  <%@businesses.each do |b|%>
     <li><%=link_to b.name, business_path(b), class: "internal"%></li>
     <br>
@@ -16,6 +19,4 @@
   
 
 
- 
-<h4><%=link_to "See all nabes", neighborhoods_path%></h4>
  
