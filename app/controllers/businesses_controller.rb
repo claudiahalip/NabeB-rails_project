@@ -43,6 +43,7 @@ class BusinessesController < ApplicationController
     end 
 
     def update 
+      # raise params.inspect
      @business = Business.find_by(id: params[:id])
      if current_user.id == @business.user_id
         @business.update(business_params)

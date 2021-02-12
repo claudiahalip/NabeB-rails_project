@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
 
-  def delete
+  def destroy
     user = User.find_by[id: params[:id]]
     if current_user == user
       user.delete

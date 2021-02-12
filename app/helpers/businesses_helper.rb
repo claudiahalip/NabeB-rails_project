@@ -17,7 +17,7 @@ module BusinessesHelper
 
     def display_delete_business(business)
         if current_user.id == business.user_id
-            link_to "Delete business", business_path, method: "DELETE"
+            link_to "Delete business", business_path, method: "DELETE", data: { confirm: 'Are you sure you want to delete this business?' }
         end
     end 
 end

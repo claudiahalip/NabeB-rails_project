@@ -3,7 +3,7 @@ class Business < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
-  validates :name,:description, :phone_number, presence: true
+  validates :name, :description, :phone_number, presence: true
   validates :name, :website, :phone_number, uniqueness: true
    
   def category_attributes=(attr)
