@@ -1,3 +1,9 @@
+body {
+  margin: auto;
+  text-align: center;
+  background-color: rgb(231, 235, 234);
+}
+
 a:link, a:visited {
   background-color: #dfc3c0;
   color: white;
@@ -119,3 +125,6 @@ a:link, a:visited {
   padding: 1px 1px;
 }
 
+.form{
+  margin: auto;
+}

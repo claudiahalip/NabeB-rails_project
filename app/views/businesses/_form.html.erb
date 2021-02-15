@@ -11,7 +11,7 @@
 <% end %>
 
 
-<%=form_for([@neighborhood, @business]) do |f| %>
+<%=form_for([@neighborhood, @business], :html => {:class => 'form'}) do |f| %>
 
 <%=f.label :neighborhood%><br>
   <%=f.collection_select :neighborhood_id, Neighborhood.all, :id,  :name, :include_blank => 'choose a neighborhood' %><br><br>
@@ -40,8 +40,11 @@
   <%=f.label :phone_number%><br>
   <%=f.text_field :phone_number%><br><br>
 
+  
+
   <%=f.label :username%><br>
   <%=f.text_field :user_name%><br><br>
+
   
   <%=f.submit%>
 
