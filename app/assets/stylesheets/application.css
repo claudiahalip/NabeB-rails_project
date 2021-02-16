@@ -1,6 +1,7 @@
 body {
+  background:url('') ;
   margin: auto;
-  text-align: center;
+  ext-align: center;
   background-color: rgb(231, 235, 234);
 }
 
@@ -127,4 +128,5 @@ a:link, a:visited {
 
 .form{
   margin: auto;
+  text-align: center;
 }
