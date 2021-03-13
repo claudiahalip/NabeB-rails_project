@@ -26,7 +26,7 @@ title{
   background-color: rgb(231, 235, 234);
 } */
 button {
-  text-align: left;
+  text-align: center;
 }
 a:link, a:visited {
   
@@ -40,7 +40,7 @@ a:link, a:visited {
  
  
  a:hover, a:active {
-    color: rgb(0, 255, 170);
+    color:  rgb(134, 201, 178);
   }
   
   a.internal {background-color: #dfc3c0;
@@ -53,7 +53,7 @@ a:link, a:visited {
     border: grey solid 1px;
     padding: 1rem;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px rgb(0, 255, 170);
+    box-shadow: 3px 4px rgb(134, 201, 178);
     perspective: 1000px; 
    
     
@@ -61,16 +61,16 @@ a:link, a:visited {
     }
 
 
-  h2 {
+  /* h2 {
     color: rgb(0, 255, 170);
     font-family: verdana;
     font-size: 200%;
-  }
+  } */
 
   h1 {
-    color: rgb(0, 255, 170);
+    color: rgb(134, 201, 178);
     font-family: AtlasGrotesk;
-    text-align: center;
+    text-align: left;
     font-size: 200%;
   }
 
@@ -78,11 +78,11 @@ a:link, a:visited {
     border: 2px solid powderblue;
   }
 
-  h4 {
+  /* h4 {
     color: rgb(98, 102, 101);
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100%;
-  }
+  } */
 
   .error_messages {
     color: rgb(245, 9, 9);
@@ -133,8 +133,8 @@ a:link, a:visited {
   list-style-type: none;
   margin-top: 1px;
   margin-bottom: 1px ;
-  border-bottom: rgb(0, 255, 170);
-  border-top: rgb(0, 255, 170);
+  border-bottom:  rgb(134, 201, 178);
+  border-top:  rgb(134, 201, 178);
   padding: 0;
   overflow: hidden;
   background-color: transparent;
@@ -161,9 +161,16 @@ a:link, a:visited {
   width: 10;
   height: 5;
   padding: 1px 1px;
+  outline: none;
 }
 
 .form{
   margin: auto;
   text-align: center;
+}
+/* navbar-right */
+
+.right{
+  display: flex;
+  position: relative;
 }
