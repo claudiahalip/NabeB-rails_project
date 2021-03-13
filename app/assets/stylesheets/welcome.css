@@ -36,13 +36,21 @@ button:hover{
     background-color:whitesmoke;
 }
 
-.home-page-text {
+.home-page-title {
     color: rgb(134, 201, 178);
     font-family: AtlasGrotesk;
     text-align: center;
     font-size: 28px;
     margin: 20px;
     margin-top: 150px;
+}
+.home-page-text {
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+  
 }
 
 

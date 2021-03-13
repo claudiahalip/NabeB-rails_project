@@ -1,6 +1,6 @@
 
-
-<h2>Sign Up</h2>
+ <%=button_to "Sign up with Google",'/auth/google_oauth2'%>
+<h2>Sign Up</h2>  
 
 <%=form_for @user do |f|%>
    <%=f.label :username%><br>

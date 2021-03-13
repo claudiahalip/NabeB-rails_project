@@ -1,9 +1,13 @@
-<h1><%=current_user.username%></h1>
+<div class="account-page">
 
-<div class = "navbar">
-    <%=link_to "Add your business", new_business_path%>
-    <%=link_to "See all businesses", businesses_path%>
-    <%=link_to "See all nabes", neighborhoods_path%>
+    <h1><%=current_user.username%></h1>
+
+    <div class = "navbar">
+        <%=link_to "Add your business", new_business_path%>
+        <%=link_to "See all businesses", businesses_path%>
+        <%=link_to "See all nabes", neighborhoods_path%>
+    </div>
+    <br>
+    <br>
+
 </div>
-<br>
-<br>
