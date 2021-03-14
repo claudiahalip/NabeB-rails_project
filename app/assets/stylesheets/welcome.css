@@ -4,6 +4,8 @@
 .first_text{
     display: flex;
     position: relative;
+    background-color:whitesmoke;
+    
  
 }
 .button-home-page {
@@ -46,7 +48,7 @@
 }
 .home-page-text {
     color: grey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: avenir;
     text-align: center;
     font-size: 18px;
     margin: 20px;
@@ -65,6 +67,18 @@
     color: rgb(68, 116, 99);
     margin-left: 400px;
 }
+
+.last_text{
+    display: flex;
+    position: relative; 
+}
+
+.last_text > img{
+    height: 400px;
+    border-radius: 10px;
+    margin: 50px;
+    
+  }
 
 
   
