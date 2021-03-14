@@ -12,19 +12,23 @@
 
 
 
-<%=form_for @neighborhood do |f|%>
-    <%=f.label :name%><br>
-    <%=f.text_field :name%><br>
+<div class="neighborhood-form">
 
-    <%=f.label :city%><br>
-    <%=f.text_field :city%><br>
+    <%=form_for @neighborhood do |f|%>
+        <%=f.label :name%><br>
+        <%=f.text_field :name%><br>
 
-    <%=f.label :state%><br>
-    <%=f.text_field :state%><br>
+        <%=f.label :city%><br>
+        <%=f.text_field :city%><br>
 
-    <%=f.label :zipcode%><br>
-    <%=f.text_field :zipcode%><br>
+        <%=f.label :state%><br>
+        <%=f.text_field :state%><br>
 
-    <%=f.submit %><br>
-  
-<%end%>
+        <%=f.label :zipcode%><br>
+        <%=f.text_field :zipcode%><br><br>
+
+        <%=f.submit %><br>
+      
+    <%end%>
+
+<div>

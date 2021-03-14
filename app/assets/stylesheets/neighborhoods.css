@@ -1,0 +1,21 @@
+/* // Place all the styles related to the Neighborhoods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/ */
+
+.neighborhood-form{
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    background-color:#f0d1ae;
+    padding: 30px;
+}
+
+.neigbor-form-title{
+    margin-left: 550px;
+     align-items: center;
+ }
+ h2.neigbor-form-title{
+     color: rgb(134, 201, 178);
+ }

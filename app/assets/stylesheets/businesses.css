@@ -1,0 +1,20 @@
+/* // Place all the styles related to the Businesses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/ */
+.business-form{
+    position: relative;
+    margin: auto;
+    height: 600px;
+    width: 300px;
+    border-radius: 5px;
+    background-color:#f0d1ae;
+    padding: 30px;
+}
+
+.business-form-title{
+   margin-left: 575px;
+    align-items: center;
+}
+h2.business-form-title{
+    color: rgb(134, 201, 178);
+}
