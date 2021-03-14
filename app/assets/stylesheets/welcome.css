@@ -21,8 +21,8 @@
     width: 200px;
 }
 
-.button-home-page:hover {
-    background-color: ivory;
+a.button-home-page:hover {
+    background-color:  rgb(134, 201, 178);
     color: orange;
 }
 

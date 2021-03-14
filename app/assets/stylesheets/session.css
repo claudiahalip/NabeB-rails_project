@@ -19,40 +19,42 @@ form > label{
 form > input {
     border-radius: 5px;
     height: 25px;
+    outline-color:  rgb(134, 201, 178);
+    border-style: none;
 }
 form > input[type=submit]{
-    outline: none;
-    -webkit-appearance: none;
+    outline-style: none;
+    outline-color:  rgb(134, 201, 178);
     background-color: rgb(134, 201, 178);;
     color: white;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
+    border-style: none;
     text-align: center;
     width: auto;
     padding-left: 5px;
     padding-right: 5px;
-}
-form input:focus{
-    outline: none;
+    
 }
 
-*:focus {
-    outline: none;
+form > input[type=submit]:hover{
+    background-color: grey;
+    color: rgb(134, 201, 178);
+    cursor: pointer;
 }
-
 
 
 .login-with-google{
-    -webkit-appearance: none;
-    outline: 0;
-    outline: none;
-    background-color: rgb(134, 201, 178);;
+    background-color: rgb(134, 201, 178);
     color: white;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;
     text-align: center;
     width: auto;
-    
+}
+.login-with-google:hover{
+    background-color: grey;
+    color: rgb(134, 201, 178);
 }
