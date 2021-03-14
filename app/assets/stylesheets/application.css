@@ -35,7 +35,7 @@ button {
   text-align: center;
 }
 a:link, a:visited {
-  
+  font-family: avenir;
   color: rgb(90, 89, 89);
   padding: 10px 20px;
   text-align: center;
