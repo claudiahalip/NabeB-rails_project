@@ -346,6 +346,8 @@ a.button-home-page:hover {
   margin-bottom: 30px;
 }
 
+
+
 .business-form-title{
  margin-left: 575px;
   align-items: center;
@@ -359,6 +361,19 @@ h2.business-form-title{
 .neighborhood-index{
   background-image: "neighborhood-01.png";
   background-color: whitesmoke;
+}
+
+.button-link{
+  outline:none;
+  background-color: #f0d1ae;
+  color: white;
+  margin-top: 10px;
+  margin-left:10px ;
+  font-size: 20px;
+  height: 70px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
 }
 
 .search-nabe{

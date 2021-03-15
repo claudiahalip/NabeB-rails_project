@@ -1,20 +1,22 @@
-<%if @neighborhood%>
-
-    <h2><%=@neighborhood.name%></h2>
-    <%= render "neighborhood"%>
-    <%if @neighborhood.businesses.empty?%>
-       <h5>There is no business listed in this area, yet!</h5>
-    <%else%>
-    
-       <%=link_to "See all the business in this nabe", neighborhood_businesses_path(@neighborhood), class: "link-for-see-all"%><br><br><br><br>
-      
-    <%end%>
-
-
-   <div  class = "navbar-nabe">
+<div class = "user-navbar">
     <%=link_to "Edit this nabe", edit_neighborhood_path %>
     <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%>
     <%=link_to "Back to all neighborhoods", neighborhoods_path%>
     <%=link_to "Back to all businesses", businesses_path%>
-   </div>
+</div>
+<%if @neighborhood%>
+      <h2><%=@neighborhood.name%></h2>
+      <%= render "neighborhood"%>
+<%if @neighborhood.businesses.empty?%>
+       <h5>There is no business listed in this area, yet!</h5>
+<%else%>
+   <div class="button-link"> 
+      <%=link_to "See all the business in this nabe", neighborhood_businesses_path(@neighborhood), class: "link-for-see-all"%><br><br><br><br>
+   </div>  
+<%end%>
+
+<%=image_tag "residential-houses-exterior-suburb-district_107791-3301.jpg"%>
+
+
+  
 <%end%>
