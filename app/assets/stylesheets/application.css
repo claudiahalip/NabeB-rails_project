@@ -90,6 +90,7 @@ a:link, a:visited {
     font-size: 200%;
     margin-left: 50px;
     border-bottom: 2px solid rgb(134, 201, 178);
+    position: sticky;
   }
 
   h2 {
@@ -332,6 +333,7 @@ a.button-home-page:hover {
   border-radius: 5px;
   background-color:#f0d1ae;
   padding: 30px;
+  margin-bottom: 30px;
 }
 
 .business-form-title{
@@ -347,6 +349,9 @@ h2.business-form-title{
 .neighborhood-index{
   background-image: "neighborhood-01.png";
   background-color: whitesmoke;
+}
+.all_nabes{
+  
 }
 .search-nabe{
   margin:20px 20px 20px 50px
@@ -380,6 +385,7 @@ h2.neigbor-form-title{
   border-radius: 5px;
   background-color:#f0d1ae;
   padding: 30px;
+  margin-bottom: 30px;
 }
 
 form > label{
@@ -445,6 +451,7 @@ form > input[type=submit]:hover{
   border-radius: 5px;
   background-color:#f0d1ae;
   padding: 30px;
+  margin-bottom: 30px;
 }
 
 .copyright{

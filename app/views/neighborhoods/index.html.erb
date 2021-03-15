@@ -12,11 +12,10 @@
     <%end%>
 </div>
 
-
-
-
-
+<div class="all_nabes">
     <%@neighborhoods.each do |n|%>
-      <%=link_to "#{n.name}, #{n.city} #{n.state}", neighborhood_path(n), class: "internal"%>
+      <%=link_to "#{n.name}, #{n.city} #{n.state}", neighborhood_path(n)%>
     <%end%>
 </div>
+</div>
+<%=image_tag("residential-houses-exterior-suburb-district_107791-3301.jpg")%>
