@@ -211,9 +211,8 @@ a:link, a:visited {
   display: flex;
   position: relative;
   background-color:whitesmoke;
-  
-
 }
+
 .button-home-page {
   outline:none;
   background-color: orange;
@@ -252,6 +251,7 @@ a.button-home-page:hover {
   margin: 20px;
   margin-top: 150px;
 }
+
 .home-page-text {
   color: grey;
   font-family: avenir;
@@ -293,6 +293,7 @@ a.button-home-page:hover {
   background-image: "neighborhood-01.png";
   background-color: whitesmoke;
 }
+
 .business-cards{
   /* display: inline-block; */
   display: grid;
@@ -304,7 +305,7 @@ a.button-home-page:hover {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-} */
+} 
 
 ::-webkit-scrollbar {
   display:none;
@@ -350,9 +351,7 @@ h2.business-form-title{
   background-image: "neighborhood-01.png";
   background-color: whitesmoke;
 }
-.all_nabes{
-  
-}
+
 .search-nabe{
   margin:20px 20px 20px 50px
 }
@@ -399,6 +398,7 @@ form > input {
   outline-color:  rgb(134, 201, 178);
   border-style: none;
 }
+
 form > input[type=submit]{
   outline-style: none;
   outline-color:  rgb(134, 201, 178);
@@ -438,8 +438,11 @@ form > input[type=submit]:hover{
 
 /* user */
 .account-page{ 
- 
-  background-color: rgba(220, 220, 220, 0.788);
+  
+}
+
+.user-navbar{
+  background-color:#f0d1ae;
 }
 
 
