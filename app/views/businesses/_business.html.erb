@@ -1,14 +1,19 @@
 
+<div class= "single-business">
+   <div class="single-business-img">
+       <%=image_tag "business-goal.jpg"%>
+   </div>
+   <div class ="business-info">
+      <h1><%=@business.name%></h1>
+      <p><%=@business.description%></p>
+      <h3 class="info"><%=@business.website%></h3>
+      <h3 class="info"><%=@business.phone_number%></h3>
 
-<ul>
- <h2><li><%=@business.name%></li></h2>
-    <p><%=@business.description%><br></p>
-    <%=@business.website%><br>
-    <%=@business.phone_number%><br><br>
-    Neighborhood:
-    <%=@business.neighborhood_name
-    %><br>
-    <br>
+       <h2 class="info-title">Neighborhood:</h2>
+      
+      <h3 class="info"><%=@business.neighborhood_name%></h3>
+      
+   </div>
 
- </ul>
+</div>
 

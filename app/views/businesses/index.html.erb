@@ -21,7 +21,8 @@
       <div class="businesses-wrapper" >
             <%@businesses.each do |b|%>
                 <div  class="business-cards">
-                <%=link_to b.name, business_path(b), class: "internal"%>
+                  <%=link_to b.name, business_path(b), class: "internal"%>
+                </div>
             <%end%>
       </div>
   </div>
