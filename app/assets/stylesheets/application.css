@@ -183,55 +183,203 @@ a:link, a:visited {
 
 }
 
-/* .photographerForm{
-  text-align: center ;
-  margin-bottom: 100px;
-}
-p {
-  font-size: 18px;
-  font-family: monospace;
-  color:  #ec9128;
-}
+/* welcome page */
 
-label{
-    font-size: 14px;
-    font-family: monospace;
-    color:  #f0d1ae;
-}
-.photo-form{
-    margin: auto;
-    height: 400px;
-    width: 300px;
-    border-radius: 5px;
-    background-color:#f0d1ae;
-    padding: 30px;
-}
-
-
-.select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  outline: none;
-}
-
-.submit {
-  width: 100%;
-  background-color:#ec9128;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  font-family: monospace;
+/* // Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/ */
+.first_text{
+  display: flex;
+  position: relative;
+  background-color:whitesmoke;
+  
 
 }
-
-.submit:hover {
-  background-color: #884c07;
+.button-home-page {
   outline:none;
-} */
+  background-color: orange;
+  color: white;
+  margin-top: 10px;
+  margin-left:200px ;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+a.button-home-page:hover {
+  background-color:  rgb(134, 201, 178);
+  color: orange;
+}
+
+.first_text > img{
+  height: 400px;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+.center_text {
+  display: flex;
+  position: relative;
+  background-color:whitesmoke;
+}
+
+.home-page-title {
+  color: rgb(134, 201, 178);
+  font-family: AtlasGrotesk;
+  text-align: center;
+  font-size: 28px;
+  margin: 20px;
+  margin-top: 150px;
+}
+.home-page-text {
+  color: grey;
+  font-family: avenir;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+
+}
+
+
+.center_text > img{
+  height: 400px;
+  border-radius: 10px;
+  margin: 50px;
+  
+}
+.author{
+  font-size: 14px;
+  color: rgb(68, 116, 99);
+  margin-left: 400px;
+}
+
+.last_text{
+  display: flex;
+  position: relative; 
+}
+
+.last_text > img{
+  height: 400px;
+  border-radius: 10px;
+  margin: 50px;
+  
+}
+
+/* business */
+
+.business-form{
+  position: relative;
+  margin: auto;
+  height: 600px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:#f0d1ae;
+  padding: 30px;
+}
+
+.business-form-title{
+ margin-left: 575px;
+  align-items: center;
+}
+h2.business-form-title{
+  color: rgb(134, 201, 178);
+}
+
+/* neighborhood */
+
+.neighborhood-form{
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:#f0d1ae;
+  padding: 30px;
+}
+
+.neigbor-form-title{
+  margin-left: 550px;
+   align-items: center;
+}
+h2.neigbor-form-title{
+   color: rgb(134, 201, 178);
+}
+
+/* session */
+
+.login-form{
+  position: relative;
+  margin: auto;
+  height: 400px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:#f0d1ae;
+  padding: 30px;
+}
+
+form > label{
+  font-family: avenir;
+  color: grey;
+}
+
+form > input {
+  border-radius: 5px;
+  height: 25px;
+  outline-color:  rgb(134, 201, 178);
+  border-style: none;
+}
+form > input[type=submit]{
+  outline-style: none;
+  outline-color:  rgb(134, 201, 178);
+  background-color: rgb(134, 201, 178);;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  text-align: center;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+}
+
+form > input[type=submit]:hover{
+  background-color: grey;
+  color: rgb(134, 201, 178);
+  cursor: pointer;
+}
+
+
+.login-with-google{
+  background-color: rgb(134, 201, 178);
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: auto;
+}
+.login-with-google:hover{
+  background-color: grey;
+  color: rgb(134, 201, 178);
+}
+
+/* user */
+.account-page{ 
+  background-color: rgba(220, 220, 220, 0.788);
+}
+
+
+.signup-form{
+  position: relative;
+  margin: auto;
+  height: 450px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:#f0d1ae;
+  padding: 30px;
+}
+
