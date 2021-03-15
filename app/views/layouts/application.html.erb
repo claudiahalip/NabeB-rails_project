@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html >
   <head>
+    <%# <a src= "/">
     <title>NabeB</title>
-    
+    </a>
+     %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,8 +23,8 @@
 
   <body>
 
-  <h1>NABE B</h1>
-
+   <h1>NABE B</h1>
+ 
     <h2><%=display_username_header%></h2>
    
     <%if logged_in?%>
