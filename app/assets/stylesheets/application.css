@@ -33,6 +33,15 @@ a.logo {
   height: 30px;
 } */
 
+.display-username{
+  margin-left: 50px;
+}
+.logout-account{
+  margin-left: 50px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
 a:link, a:visited {
   font-family: avenir;
   color: rgb(90, 89, 89);
@@ -48,14 +57,16 @@ a:link, a:visited {
     color:  rgb(134, 201, 178);
   }
   
-  a.internal {background-color: #dfc3c0;
-    color: white;
+  a.internal {
+    /* background-color: #dfc3c0; */
+    /* color: white; */
     padding: 30px 30px;
     width: 15rem;
     height: 5rem;
     text-align: center;
     text-decoration: none;
     border: grey solid 1px;
+    border-radius: 10px;
     padding: 1rem;
     margin: 1rem 2rem;
     box-shadow: 3px 4px rgb(134, 201, 178);
@@ -124,11 +135,7 @@ a:link, a:visited {
   background-color: rgb(209, 120, 120);
   display: inline;
 }
-
-.business-cards{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-} 
+/* business */
 
 
 
@@ -199,9 +206,6 @@ a:link, a:visited {
 
 /* welcome page */
 
-/* // Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/ */
 .first_text{
   display: flex;
   position: relative;
@@ -282,6 +286,38 @@ a.button-home-page:hover {
 }
 
 /* business */
+
+
+.business-index{
+  background-image: "neighborhood-01.png";
+  background-color: whitesmoke;
+}
+.business-cards{
+  display: inline-block;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto; */
+  
+} 
+
+.businesses-wrapper{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  display:none;
+}
+
+.search-business{
+  margin:20px 20px 20px 50px
+}
+
+.image-businesses-page{
+  background-position-x: 0;
+  position: -webkit-sticky;
+}
+
 
 .business-form{
   position: relative;
@@ -383,6 +419,7 @@ form > input[type=submit]:hover{
 
 /* user */
 .account-page{ 
+ 
   background-color: rgba(220, 220, 220, 0.788);
 }
 
