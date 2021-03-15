@@ -1,23 +1,22 @@
-<h2>All Neighborhood</h2>
-
-<%= form_tag('/neighborhoods', method: 'get') do %>
-  <%=text_field_tag(:q)%> 
-  <%=submit_tag("Search for a neighborhood")%>
-<%end%>
-
-
+<div class ="neighborhood-index">
 <div  class = "navbar">
-<%=link_to "All businesses", businesses_path%>
+<%=link_to "See all businesses", businesses_path%>
 <%=link_to "Add a neighborhood", new_neighborhood_path%>
 </div>
 
-<ul class="business-cards">
-<%@neighborhoods.each do |n|%>
-   <li><%=link_to n.name, neighborhood_path(n), class: "internal"%></li>
-   <%=n.city%>
-   <%=n.state%>
-   <%=n.zipcode%><br><br>
-<%end%>
+<h1>All Neighborhood</h1>
+ <div class="search-nabe">
+    <%= form_tag('/neighborhoods', method: 'get') do %>
+      <%=text_field_tag(:q)%> 
+      <%=submit_tag("Search for a neighborhood")%>
+    <%end%>
+</div>
 
-</ul>
 
+
+
+
+    <%@neighborhoods.each do |n|%>
+      <%=link_to "#{n.name}, #{n.city} #{n.state}", neighborhood_path(n), class: "internal"%>
+    <%end%>
+</div>

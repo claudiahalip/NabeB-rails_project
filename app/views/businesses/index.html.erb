@@ -1,33 +1,33 @@
 <div class = "business-index">
-     <div  class = "navbar">
-        <%=link_to "See all nabes", neighborhoods_path%>
-      </div>
-      <h1><%=display_businesses_header(@neighborhood)%></h1>
+    <div  class = "navbar">
+      <%=link_to "See all nabes", neighborhoods_path%>
+    </div>
+    <h1><%=display_businesses_header(@neighborhood)%></h1>
       
-      
-
-      <div class="search-business">
+    <div class="search-business">
         <%= form_tag('/businesses', method: 'get') do %>
           <%=text_field_tag(:q)%> 
           <%=submit_tag("Search for a business by category")%>
         <%end%>
-      </div>
+    </div>
 
       
-
+  <div class="just-cards">
       <div class="businesses-wrapper" >
-          <%@businesses.each do |b|%>
-              <div  class="business-cards">
-              <%=link_to b.name, business_path(b), class: "internal"%>
-      
-          <%end%>
+            <%@businesses.each do |b|%>
+                <div  class="business-cards">
+                <%=link_to b.name, business_path(b), class: "internal"%>
+            <%end%>
       </div>
+  </div>
+
+  
 
       
 </div>
-<div class="image-businesses-page">
-  <%=image_tag("neighborhood-01.png") %>
-</div>
+
+
+
 
 
   

@@ -293,9 +293,9 @@ a.button-home-page:hover {
   background-color: whitesmoke;
 }
 .business-cards{
-  display: inline-block;
-  /* display: grid;
-  grid-template-columns: auto auto auto auto; */
+  /* display: inline-block; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   
 } 
 
@@ -303,10 +303,15 @@ a.button-home-page:hover {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-}
+} */
 
 ::-webkit-scrollbar {
   display:none;
+}
+
+ .just-cards{
+  
+  width: auto;
 }
 
 .search-business{
@@ -338,6 +343,14 @@ h2.business-form-title{
 }
 
 /* neighborhood */
+
+.neighborhood-index{
+  background-image: "neighborhood-01.png";
+  background-color: whitesmoke;
+}
+.search-nabe{
+  margin:20px 20px 20px 50px
+}
 
 .neighborhood-form{
   position: relative;
@@ -432,5 +445,11 @@ form > input[type=submit]:hover{
   border-radius: 5px;
   background-color:#f0d1ae;
   padding: 30px;
+}
+
+.copyright{
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: avenir;
 }
 
