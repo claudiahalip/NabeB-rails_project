@@ -290,12 +290,21 @@ a.button-home-page:hover {
 
 
 .business-index{
-  background-image: "neighborhood-01.png";
+  
   background-color: whitesmoke;
+}
+.business-index-img{
+  background-color: rgb(134, 201, 178);
+}
+.business-index-img > img{
+  height: 200px;
+  width: 1000px;
+  
 }
 
 .business-cards{
   /* display: inline-block; */
+  
   display: grid;
   grid-template-columns: auto auto auto auto;
   
