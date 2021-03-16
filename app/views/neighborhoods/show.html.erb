@@ -5,10 +5,10 @@
     <%=link_to "Back to all businesses", businesses_path%>
 </div>
 <%if @neighborhood%>
-      <h2><%=@neighborhood.name%></h2>
+      <h2 class="nabe-name"><%=@neighborhood.name%></h2>
       <%= render "neighborhood"%>
 <%if @neighborhood.businesses.empty?%>
-       <h5>There is no business listed in this area, yet!</h5>
+       <h5>There is no business listed in this neighborhood, yet!</h5>
 <%else%>
    <div class="button-link"> 
       <%=link_to "See all the business in this nabe", neighborhood_businesses_path(@neighborhood), class: "link-for-see-all"%><br><br><br><br>

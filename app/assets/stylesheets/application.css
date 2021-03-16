@@ -97,6 +97,12 @@ a:link, a:visited {
     font-family: avenir;
     color: grey;
   }
+  h5{
+    font-size: 18px;
+    font-family: avenir;
+    color:tomato;
+    margin-left: 50px;
+  }
 
   p {
     /* border: 2px solid rgb(134, 201, 178); */
@@ -320,9 +326,9 @@ a.button-home-page:hover {
   white-space: nowrap;
 } 
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display:none;
-}
+} */
 
  .just-cards{
   
@@ -440,6 +446,10 @@ h2.business-form-title{
 }
 h2.neigbor-form-title{
    color: rgb(134, 201, 178);
+}
+
+.nabe-name{
+  margin-left:50px
 }
 
 /* session */
