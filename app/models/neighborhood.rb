@@ -16,5 +16,5 @@ class Neighborhood < ApplicationRecord
         n.reverse
     end 
 
-    #binding.pry
+    binding.pry
 end
