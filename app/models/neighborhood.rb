@@ -15,6 +15,4 @@ class Neighborhood < ApplicationRecord
         n = neighborhood.sort_by { |n| n.businesses.size }
         n.reverse
     end 
-
-    binding.pry
 end
