@@ -6,11 +6,13 @@ ruby '3.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
-gem 'pg', '0.18.1'
+gem 'pg', '>= 0.18.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6' 
+
+gem 'psych', '~> 3.3.2'
 
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
