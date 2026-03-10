@@ -3,7 +3,7 @@ class BusinessesController < ApplicationController
   
     def index
       @businesses = Business.all.alpha_sort
-      @businesses = @neighborhood.businesses.alpha_sort if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
+      @businesses = @neighborhood.businesses.alpha_sort if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by(id: params[:neighborhood_id])
       @businesses = Business.search_business(params[:q]) if  params[:q] && !params[:q].empty?
       
       respond_to do |format|
@@ -14,7 +14,7 @@ class BusinessesController < ApplicationController
     end 
 
     def new 
-      if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by_id(params[:neighborhood_id])
+      if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by(id: params[:neighborhood_id])
         @business = @neighborhood.businesses.build 
       else
         @business = Business.new
