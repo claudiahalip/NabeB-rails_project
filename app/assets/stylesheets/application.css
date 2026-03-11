@@ -645,3 +645,265 @@ form > input[type=submit]:hover{
   font-size: 16px;
 }
 
+/* ===== Global Navbar ===== */
+
+.global-navbar {
+  background-color: #fff;
+  border-bottom: 2px solid rgb(134, 201, 178);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-logo {
+  font-family: AtlasGrotesk, avenir, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(134, 201, 178) !important;
+  text-decoration: none !important;
+  padding: 0 !important;
+  letter-spacing: 1px;
+}
+
+.navbar-logo:hover,
+.navbar-logo:active {
+  color: rgb(100, 170, 148) !important;
+  background-color: transparent !important;
+}
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.navbar-hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(90, 89, 89);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.navbar-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-collapse {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 32px;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+  flex: 1;
+}
+
+.navbar-nav .nav-link {
+  font-family: avenir, sans-serif;
+  font-size: 15px;
+  color: rgb(90, 89, 89) !important;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active {
+  color: rgb(134, 201, 178) !important;
+  background-color: rgba(134, 201, 178, 0.1);
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(134, 201, 178) !important;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(134, 201, 178);
+  border-radius: 0;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.navbar-welcome {
+  font-family: avenir, sans-serif;
+  font-size: 14px;
+  color: grey;
+  white-space: nowrap;
+}
+
+.navbar-auth .nav-link {
+  font-family: avenir, sans-serif;
+  font-size: 15px;
+  color: rgb(90, 89, 89) !important;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-auth .nav-link:hover,
+.navbar-auth .nav-link:active {
+  color: rgb(134, 201, 178) !important;
+  background-color: rgba(134, 201, 178, 0.1);
+}
+
+/* Auth Buttons */
+.btn {
+  font-family: avenir, sans-serif;
+  font-size: 14px;
+  padding: 7px 18px !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.btn-login {
+  color: rgb(134, 201, 178) !important;
+  border-color: rgb(134, 201, 178);
+  background-color: transparent;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active {
+  background-color: rgb(134, 201, 178) !important;
+  color: white !important;
+}
+
+.btn-signup {
+  background-color: rgb(134, 201, 178);
+  color: white !important;
+  border-color: rgb(134, 201, 178);
+}
+
+.btn-signup:hover,
+.btn-signup:focus,
+.btn-signup:active {
+  background-color: rgb(100, 170, 148) !important;
+  border-color: rgb(100, 170, 148);
+  color: white !important;
+}
+
+/* Logout button — button_to wraps in a form, so we also target the form */
+.navbar-auth form {
+  display: inline;
+  margin: 0;
+}
+
+.btn-logout {
+  font-family: avenir, sans-serif;
+  font-size: 14px;
+  padding: 7px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  color: grey;
+  border: 1px solid #ddd;
+  outline: none;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.btn-logout:hover,
+.btn-logout:focus {
+  background-color: rgba(255, 99, 71, 0.08);
+  color: tomato;
+  border-color: rgba(255, 99, 71, 0.4);
+}
+
+/* Responsive — mobile hamburger */
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 2px solid rgb(134, 201, 178);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    margin-left: 0;
+  }
+
+  .navbar-collapse.open {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 8px !important;
+  }
+
+  .navbar-auth {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    gap: 8px;
+  }
+}
