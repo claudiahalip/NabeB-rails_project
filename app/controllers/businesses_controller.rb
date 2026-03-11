@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
-  
-  
-    def index
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
+
+  def index
       @businesses = Business.all.alpha_sort
       @businesses = @neighborhood.businesses.alpha_sort if params[:neighborhood_id] && @neighborhood = Neighborhood.find_by(id: params[:neighborhood_id])
       @businesses = Business.search_business(params[:q]) if  params[:q] && !params[:q].empty?

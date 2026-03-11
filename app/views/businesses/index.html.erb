@@ -6,6 +6,9 @@
 
     <div  class = "navbar">
         <%=link_to "See all nabes", neighborhoods_path%>
+        <% if logged_in? %>
+          <%=link_to "Add a Business", new_business_path, class: "nav-bar-link"%>
+        <% end %>
     </div>
     <h1><%=display_businesses_header(@neighborhood)%></h1>
 

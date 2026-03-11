@@ -1,6 +1,8 @@
 <div class = "user-navbar">
-    <%=link_to "Edit this nabe", edit_neighborhood_path %>
-    <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%>
+    <% if logged_in? %>
+      <%=link_to "Edit this nabe", edit_neighborhood_path %>
+      <%=link_to "Add a business", new_neighborhood_business_path(@neighborhood)%>
+    <% end %>
     <%=link_to "Back to all neighborhoods", neighborhoods_path%>
     <%=link_to "Back to all businesses", businesses_path%>
 </div>

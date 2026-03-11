@@ -1,6 +1,7 @@
 class NeighborhoodsController < ApplicationController
+  before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
 
-    def index
+  def index
       if params[:q] && !params[:q].empty?
         @neighborhoods = Neighborhood.search_neighborhood(params[:q])
       else

@@ -10,15 +10,15 @@ module BusinessesHelper
 
 
     def display_edit_business(business)
-        if current_user.id == business.user_id
-            link_to "Edit", edit_business_path 
+        if logged_in? && current_user.id == business.user_id
+            link_to "Edit", edit_business_path
         end
-    end 
+    end
 
     def display_delete_business(business)
-        if current_user.id == business.user_id
+        if logged_in? && current_user.id == business.user_id
             link_to "Delete business", business_path, method: "DELETE", data: { confirm: 'Are you sure you want to delete this business?' }
         end
-    end 
+    end
 end
 

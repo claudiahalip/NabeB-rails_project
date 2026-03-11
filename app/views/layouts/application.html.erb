@@ -12,16 +12,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  
-    
-    <% flash.each do |name, msg| -%>
-     <div class="error_messages"> <%= content_tag :div, msg, class: name %> </div>
-    <% end%>
-   
-    
-  
-
   <body>
+
+  <% flash.each do |name, msg| -%>
+    <div class="error_messages"> <%= content_tag :div, msg, class: name %> </div>
+  <% end %>
 
   <h1>NABE B</h1>
   <div class = "display-username">
