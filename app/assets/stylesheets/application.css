@@ -541,3 +541,107 @@ form > input[type=submit]:hover{
   font-family: avenir;
 }
 
+/* ===== Modern Live Search Styles ===== */
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 520px;
+  gap: 10px;
+}
+
+.search-input-inner {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 13px;
+  font-size: 15px;
+  color: #aaa;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 36px 10px 40px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: avenir, sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.search-input:focus {
+  border-color: rgb(134, 201, 178);
+  box-shadow: 0 0 0 3px rgba(134, 201, 178, 0.25);
+}
+
+.search-clear {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 50%;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.search-clear:hover {
+  color: #555;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.search-button {
+  padding: 10px 22px;
+  background-color: rgb(134, 201, 178);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: avenir, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: rgb(100, 170, 148);
+}
+
+/* Loading state — dims the results while fetching */
+[data-loading="true"] {
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.search-empty {
+  color: grey;
+  font-family: avenir;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.search-error {
+  color: tomato;
+  font-family: avenir;
+  padding: 20px 0;
+  font-size: 16px;
+}
+

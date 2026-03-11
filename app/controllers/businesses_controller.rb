@@ -7,9 +7,15 @@ class BusinessesController < ApplicationController
       @businesses = Business.search_business(params[:q]) if  params[:q] && !params[:q].empty?
       
       respond_to do |format|
-        format.html{render :index}
+        format.html do
+          if request.xhr?
+            render partial: 'businesses_list', layout: false
+          else
+            render :index
+          end
+        end
         format.json{render json: @businesses}
-      end 
+      end
         
     end 
 

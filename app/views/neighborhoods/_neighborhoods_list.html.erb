@@ -1,0 +1,9 @@
+<% if @neighborhoods.any? %>
+  <%@neighborhoods.each do |n|%>
+    <div class="nabe-name">
+      <%=link_to "#{n.name}, #{n.city} #{n.state}", neighborhood_path(n)%>
+    </div>
+  <%end%>
+<% else %>
+  <p class="search-empty">No neighborhoods found. Try a different search term.</p>
+<% end %>
