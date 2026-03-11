@@ -1,8 +1,6 @@
 class SessionController < ApplicationController
 
-  skip_before_action :require_login, only: [:new, :create, :omniauth]
-
-    def new
+  def new
       @user = User.new
     end
 

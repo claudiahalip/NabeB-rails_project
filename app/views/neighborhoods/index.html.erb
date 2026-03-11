@@ -1,7 +1,9 @@
 <div class ="neighborhood-index">
 <div  class = "navbar">
 <%=link_to "See all businesses", businesses_path%>
-<%=link_to "Add a neighborhood", new_neighborhood_path%>
+<% if logged_in? %>
+  <%=link_to "Add a neighborhood", new_neighborhood_path%>
+<% end %>
 </div>
 
 <h1>All Neighborhoods</h1>
