@@ -4,18 +4,33 @@
 <%=link_to "Add a neighborhood", new_neighborhood_path%>
 </div>
 
-<h1>All Neighborhood</h1>
+<h1>All Neighborhoods</h1>
  <div class="search-nabe">
-    <%= form_tag('/neighborhoods', method: 'get') do %>
-      <%=text_field_tag(:q)%> 
-      <%=submit_tag("Search for a neighborhood")%>
+    <%= form_tag('/neighborhoods', method: 'get',
+          data: { live_search_form: '', live_search_results: 'neighborhoods-list' },
+          role: 'search') do %>
+      <div class="search-input-wrapper">
+        <div class="search-input-inner">
+          <span class="search-icon" aria-hidden="true">&#128269;</span>
+          <%= text_field_tag(:q, params[:q],
+                placeholder: "Search neighborhoods...",
+                class: "search-input",
+                autocomplete: "off",
+                'aria-label' => "Search neighborhoods",
+                data: { live_search_input: '' }) %>
+          <button type="button"
+                  class="search-clear"
+                  data-live-search-clear="true"
+                  aria-label="Clear search"
+                  style="display: none;">&#x2715;</button>
+        </div>
+        <%= submit_tag("Search", class: "search-button") %>
+      </div>
     <%end%>
 </div>
 
-<div class="all_nabes">
-    <%@neighborhoods.each do |n|%>
-      <%=link_to "#{n.name}, #{n.city} #{n.state}", neighborhood_path(n)%>
-    <%end%>
+<div class="all_nabes" id="neighborhoods-list" aria-live="polite" aria-label="Neighborhood results">
+  <%= render partial: 'neighborhoods_list' %>
 </div>
 </div>
 <%=image_tag("residential-houses-exterior-suburb-district_107791-3301.jpg")%>

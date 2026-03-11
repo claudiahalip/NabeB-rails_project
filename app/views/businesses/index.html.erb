@@ -8,35 +8,35 @@
         <%=link_to "See all nabes", neighborhoods_path%>
     </div>
     <h1><%=display_businesses_header(@neighborhood)%></h1>
-      
+
     <div class="search-business">
-        <%= form_tag('/businesses', method: 'get') do %>
-          <%=text_field_tag(:q)%> 
-          <%=submit_tag("Search for a business by category")%>
+        <%= form_tag('/businesses', method: 'get',
+              data: { live_search_form: '', live_search_results: 'businesses-list' },
+              role: 'search') do %>
+          <div class="search-input-wrapper">
+            <div class="search-input-inner">
+              <span class="search-icon" aria-hidden="true">&#128269;</span>
+              <%= text_field_tag(:q, params[:q],
+                    placeholder: "Search businesses by name or category...",
+                    class: "search-input",
+                    autocomplete: "off",
+                    'aria-label' => "Search businesses",
+                    data: { live_search_input: '' }) %>
+              <button type="button"
+                      class="search-clear"
+                      data-live-search-clear="true"
+                      aria-label="Clear search"
+                      style="display: none;">&#x2715;</button>
+            </div>
+            <%= submit_tag("Search", class: "search-button") %>
+          </div>
         <%end%>
     </div>
 
-      
   <div class="just-cards">
-      <div class="businesses-wrapper" >
-            <%@businesses.each do |b|%>
-                <div  class="business-cards">
-                  <%=link_to b.name, business_path(b), class: "internal"%>
-                </div>
-            <%end%>
+      <div class="businesses-wrapper" id="businesses-list" aria-live="polite" aria-label="Business results">
+            <%= render partial: 'businesses_list' %>
       </div>
   </div>
 
-  
-
-      
 </div>
-
-
-
-
-
-  
-
-
- 

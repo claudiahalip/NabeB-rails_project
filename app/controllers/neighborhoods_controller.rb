@@ -3,11 +3,20 @@ class NeighborhoodsController < ApplicationController
     def index
       if params[:q] && !params[:q].empty?
         @neighborhoods = Neighborhood.search_neighborhood(params[:q])
-      else 
+      else
         @neighborhoods = Neighborhood.all.alpha_sort
-        
       end
-    end 
+
+      respond_to do |format|
+        format.html do
+          if request.xhr?
+            render partial: 'neighborhoods_list', layout: false
+          else
+            render :index
+          end
+        end
+      end
+    end
 
     def new 
       @neighborhood = Neighborhood.new

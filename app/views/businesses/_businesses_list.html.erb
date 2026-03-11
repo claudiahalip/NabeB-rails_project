@@ -1,0 +1,9 @@
+<% if @businesses.any? %>
+  <%@businesses.each do |b|%>
+    <div class="business-cards">
+      <%=link_to b.name, business_path(b), class: "internal"%>
+    </div>
+  <%end%>
+<% else %>
+  <p class="search-empty">No businesses found. Try a different search term.</p>
+<% end %>
