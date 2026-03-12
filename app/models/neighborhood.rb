@@ -7,6 +7,7 @@ class Neighborhood < ApplicationRecord
     validates :name, uniqueness: {scope: :zipcode, message: "the neighborhood already exist in this zipcode area " }
    
 
+    scope :alpha_sort, -> { order(:name) }
     scope :search_neighborhood, ->(params) {where("LOWER(name) LIKE?","%#{params}%")}
    
     def self.sort_nebe_businesses

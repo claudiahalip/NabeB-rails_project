@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyString
-  website: MyString
-  phone_number: MyString
-  neighborhood: one
-  user: one
-  category: one
+pizza_place:
+  name: Pizza Place
+  description: A great pizza restaurant in the neighborhood
+  website: http://pizza.example.com
+  phone_number: "555-1234"
+  neighborhood: downtown
+  user: alice
+  category: restaurant
 
-two:
-  name: MyString
-  description: MyString
-  website: MyString
-  phone_number: MyString
-  neighborhood: two
-  user: two
-  category: two
+book_store:
+  name: Book Store
+  description: A lovely independent book store
+  website: http://books.example.com
+  phone_number: "555-5678"
+  neighborhood: uptown
+  user: bob
+  category: retail

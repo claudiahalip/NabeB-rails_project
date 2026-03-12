@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  city: MyString
-  state: MyString
-  zipcode: MyString
+downtown:
+  name: Downtown
+  city: New York
+  state: NY
+  zipcode: "10001"
 
-two:
-  name: MyString
-  city: MyString
-  state: MyString
-  zipcode: MyString
+uptown:
+  name: Uptown
+  city: New York
+  state: NY
+  zipcode: "10002"
